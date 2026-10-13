@@ -1,0 +1,352 @@
+[
+ {
+  "name": "Jeht",
+  "region": "Sumeru",
+  "description": "A courageous member of the Tanit tribe in Sumeru who embarks on an emotional and epic journey through the desert alongside the Traveler."
+ },
+ {
+  "name": "Liben",
+  "region": "Event (Mondstadt)",
+  "description": "A traveling merchant from Snezhnaya who appears during specific events to trade valuable rewards in exchange for common regional materials."
+ },
+ {
+  "name": "Timmie",
+  "region": "Mondstadt",
+  "description": "A young boy who spends his days standing near the bridge entering Mondstadt"
+ },
+ {
+  "name": "Madame Ping",
+  "region": "Liyue",
+  "description": "A cheerful elderly resident of Liyue Harbor who is secretly an adeptus and the keeper of the magical Serenitea Pot realm."
+ },
+ {
+  "name": "Dunyarzad",
+  "region": "Sumeru",
+  "description": "A devoted and kind-hearted young noblewoman in Sumeru City who is a loyal attendant and friend of Lesser Lord Kusanali."
+ },
+ {
+  "name": "Taroumaru",
+  "region": "Inazuma",
+  "description": "A clever and business-savvy Shiba Inu who manages the Komore Teahouse in Inazuma City."
+ },
+ {
+  "name": "Rana",
+  "region": "Sumeru",
+  "description": "A Forest Watcher trainee from Sumeru who dreams of protecting her homeland and eventually receives a Vision."
+ },
+ {
+  "name": "Vlad",
+  "region": "Liyue",
+  "description": "A diligent Fatui guard stationed at the Northland Bank in Liyue Harbor during the daytime."
+ },
+ {
+  "name": "Nadia",
+  "region": "Liyue",
+  "description": "A polite and romantic Fatui operative working the night shift at the Northland Bank in Liyue Harbor."
+ },
+ {
+  "name": "Sango",
+  "region": "Inazuma",
+  "description": "The sharp-witted and analytical head of the Bantan Sango Detective Agency in Inazuma."
+ },
+ {
+  "name": "Ryuuji",
+  "region": "Inazuma",
+  "description": "A dedicated and earnest detective who works alongside Sango to handle fieldwork and investigations."
+ },
+ {
+  "name": "Lepine-Pauline",
+  "region": "Event (Fontaine)",
+  "description": "An anxious and high-strung clockwork engineer from Fontaine who frequently participates in regional mechanics events."
+ },
+ {
+  "name": "Hanniyah",
+  "region": "Event (Sumeru)",
+  "description": "A knowledgeable Sumeru researcher who is deeply passionate about the Inter-Darshan Championship and Beast Tamer tournaments."
+ },
+ {
+  "name": "Souka",
+  "region": "Event (Inazuma)",
+  "description": "A lively Inazuman citizen who frequently takes part in various cultural festivals and community events across the region."
+ },
+ {
+  "name": "Bongo-Head",
+  "region": "Event (Sumeru)",
+  "description": "A friendly and sentient floating Hydro Fungus companion befriended during Sumeru's animal training events."
+ },
+ {
+  "name": "Arama",
+  "region": "Sumeru",
+  "description": "A wise Aranara who sacrifices his memories and existence to help plant a new Ashvattha Tree in Vanarana."
+ },
+ {
+  "name": "Ararycan",
+  "region": "Sumeru",
+  "description": "A helpful blue Aranara who assists the Traveler during the exploration of Devantaka Mountain and the giant Ruin Golem."
+ },
+ {
+  "name": "Arabalika",
+  "region": "Sumeru",
+  "description": "A fiercely powerful warrior among the Aranara known for effortlessly defeating powerful Ruin Machines."
+ },
+ {
+  "name": "Sorush",
+  "region": "Sumeru Desert",
+  "description": "A prideful and arrogant Pari bloomguard who guides the Traveler through the arid wastes of the Realm of Farakhkert."
+ },
+ {
+  "name": "Scylla",
+  "region": "Fontaine",
+  "description": "A magnificent and ancient dragon dwelling within the submerged depths of the Sea of Bygone Eras in Fontaine."
+ },
+ {
+  "name": "Little One",
+  "region": "Natlan",
+  "description": "A playful and customizable baby Saurian companion who accompanies the Traveler throughout their adventures in Natlan."
+ },
+ {
+  "name": "Caterpillar",
+  "region": "Fontaine",
+  "description": "An articulate, human-shaped Hilichurl researcher who plays a crucial role in the Narzissenkreuz Ordo storyline."
+ },
+ {
+  "name": "Fujin",
+  "region": "Liyue",
+  "description": "An enigmatic carp adeptus residing in Chenyu Vale who protects the waters and traditions of the region."
+ },
+ {
+  "name": "Ying'er",
+  "region": "Liyue",
+  "description": "A flirtatious and smooth-talking perfume maker at Fontaine's Perfume shop in Liyue Harbor."
+ },
+ {
+  "name": "Timaeus",
+  "region": "Mondstadt",
+  "description": "An earnest alchemist's apprentice working under Albedo near the Mondstadt Alchemy crafting bench."
+ },
+ {
+  "name": "Teucer",
+  "region": "Snezhnaya / Liyue",
+  "description": "Childe’s energetic and imaginative younger brother who visits Liyue Harbor and believes that Ruin Guards are simple toys."
+ },
+ {
+  "name": "Mamere",
+  "region": "Fontaine",
+  "description": "A gentle and imaginative Melusine painter living in Merusea Village whose artwork holds a mysterious secret."
+ },
+ {
+  "name": "Pahsiv",
+  "region": "Fontaine",
+  "description": "An endearing Melusine creature residing in the underwater caverns of Fontaine who communicates solely using her own name."
+ },
+ {
+  "name": "Zhiqiong",
+  "region": "Liyue (The Chasm)",
+  "description": "A daring and ambitious cartographer from the Liyue Adventurers' Guild who explores the hazardous depths of The Chasm."
+ },
+ {
+  "name": "Verr Goldet",
+  "region": "Liyue",
+  "description": "The calm and observant owner of Wangshu Inn who secretly serves as a strategic intelligence agent for Liyue."
+ },
+ {
+  "name": "Chef Mao",
+  "region": "Liyue",
+  "description": "The warm-hearted owner of Wanmin Restaurant and the proud father of the Pyro chef Xiangling."
+ },
+ {
+  "name": "Aeval",
+  "region": "Fontaine",
+  "description": "A talkative and cheerful Melusine who serves as a tour guide for the Clementine Line aquabus in Fontaine."
+ },
+ {
+  "name": "Elphane",
+  "region": "Fontaine",
+  "description": "A diligent and orderly Melusine who operates the Navia Line aquabus transit system in Fontaine."
+ },
+ {
+  "name": "Talochard",
+  "region": "Fontaine",
+  "description": "An energetic and headstrong Melusine detective associated with the Fontaine Research Institute."
+ },
+ {
+  "name": "Wagner",
+  "region": "Mondstadt",
+  "description": "A perpetually grumpy yet exceptionally skilled master blacksmith operating his forge in Mondstadt."
+ },
+ {
+  "name": "Ellin",
+  "region": "Mondstadt",
+  "description": "An enthusiastic aspiring Knight of Favonius who endlessly practices combat maneuvers near the Mondstadt headquarters."
+ },
+ {
+  "name": "Anna",
+  "region": "Mondstadt",
+  "description": "A former adventurer from Mondstadt who recovers from a severe illness and later joins the Adventurers' Guild as a playable-style NPC."
+ },
+ {
+  "name": "Glory",
+  "region": "Mondstadt",
+  "description": "A gentle blind woman in Mondstadt who sits faithfully on a bench waiting for her beloved knight Godwin to return."
+ },
+ {
+  "name": "Godwin",
+  "region": "Mondstadt",
+  "description": "A cowardly Knight of Favonius stationed outside Mondstadt who is too ashamed to return after losing his unit."
+ },
+ {
+  "name": "Viktor",
+  "region": "Fatui (Snezhnaya)",
+  "description": "A Fatui diplomat stationed inside Mondstadt's cathedral who shares insights into the inner workings of the Snezhnayan organization."
+ },
+ {
+  "name": "Cyrus",
+  "region": "Mondstadt",
+  "description": "The booming and boastful Branch Master of the Mondstadt Adventurers' Guild."
+ },
+ {
+  "name": "Grandpa Lu",
+  "region": "Liyue",
+  "description": "An elderly master carpenter residing in Qingce Village who oversees local woodworking and crafts."
+ },
+ {
+  "name": "Granny Ruoxin",
+  "region": "Liyue",
+  "description": "The respected and caring community matriarch of Qingce Village who looks after its elderly residents and history."
+ },
+ {
+  "name": "Albert",
+  "region": "Mondstadt",
+  "description": "A fanatical follower of Barbara who leads her fan club with an intense and overwhelming devotion."
+ },
+ {
+  "name": "Kujirai Momiji",
+  "region": "Inazuma",
+  "description": "An Inazuman fishing enthusiast who exchanges special weapons and items in exchange for collected fish."
+ },
+ {
+  "name": "Shimura Kanbei",
+  "region": "Inazuma",
+  "description": "The friendly owner of the Shimuraya food stall located right outside Inazuma City's main street."
+ },
+ {
+  "name": "Chang the Ninth",
+  "region": "Liyue",
+  "description": "A cynical and perpetually stressed web-novel author living a quiet life in Qingce Village."
+ },
+ {
+  "name": "Marjorie",
+  "region": "Mondstadt",
+  "description": "The cheerful proprietor of the \"With Wind Comes Glory\" souvenir shop in Mondstadt."
+ },
+ {
+  "name": "Jifang",
+  "region": "Liyue",
+  "description": "The knowledgeable and helpful owner of the Wanwen Bookhouse in Liyue Harbor."
+ },
+ {
+  "name": "Gendou Ringo",
+  "region": "Inazuma",
+  "description": "A mysterious shrine maiden handling fortune slips in Narukami Island who conceals a secret past with the Fatui."
+ },
+ {
+  "name": "Masanori",
+  "region": "Inazuma",
+  "description": "An amnesiac rogue samurai wandering Kannazuka who challenges travelers to grueling sword duels."
+ },
+ {
+  "name": "Master Zhang",
+  "region": "Liyue",
+  "description": "A legendary master blacksmith operating his open-air workshop near the docks of Liyue Harbor."
+ },
+ {
+  "name": "Hajime",
+  "region": "Inazuma",
+  "description": "A proud and traditional blacksmith working at the smithy in Inazuma City."
+ },
+ {
+  "name": "Flora",
+  "region": "Mondstadt",
+  "description": "A sweet young flower vendor who runs her floral stall just outside the gates of Mondstadt."
+ },
+ {
+  "name": "Donna",
+  "region": "Mondstadt",
+  "description": "A floral assistant in Mondstadt who is well-known for daydreaming and harboring a massive crush on Diluc."
+ },
+ {
+  "name": "Pacal",
+  "region": "Natlan",
+  "description": "The seasoned chief of the Children of Echoes (Nanatzcayan) tribe, who oversee gem mining and dance in the rocky canyons of Natlan."
+ },
+ {
+  "name": "Wayna",
+  "region": "Natlan",
+  "description": "The adventurous chief of the Scions of the Canopy (Huitztlan) tribe, known for their courier work and high-altitude grapple acrobatics among the cliffs."
+ },
+ {
+  "name": "Amina",
+  "region": "Natlan",
+  "description": "The diligent chief of the People of the Springs (Meztli) tribe, a warm resort community famous for hot springs and water sports."
+ },
+ {
+  "name": "Mutota",
+  "region": "Natlan",
+  "description": "The chief of the Flower-Feather Clan (Tlalocan) tribe, whose members bond with aerial Qucusaurs to patrol the skies from high cliffs."
+ },
+ {
+  "name": "Biram",
+  "region": "Natlan",
+  "description": "The masked chief of the Masters of the Night-Wind (Mictlan) tribe, known for their shamans, spiritual divination, and connection to the Iktomisauri."
+ },
+ {
+  "name": "Acatl",
+  "region": "Natlan",
+  "description": "The masked chief of the Collective of Plenty (Teteocan) tribe, an athletic and warrior community renowned for wrestling and massive feasts near the volcano."
+ },
+ {
+  "name": "Netochka",
+  "region": "Nod-Krai",
+  "description": "A fiery Snezhnayan young woman encountered in Nod-Krai."
+ },
+ {
+  "name": "Zeitlind",
+  "region": "Mondstadt",
+  "description": "A steady and reserved young woman from Mondstadt who explores the Temple of Space to retrace the steps of her missing older sister, Raumhilda."
+ },
+ {
+  "name": "Seamus",
+  "region": "Mondstadt",
+  "description": "The strict and dedicated Seneschal of the Church of Favonius in Mondstadt."
+ },
+ {
+  "name": "Soraya",
+  "region": "Liyue",
+  "description": "A scholarly Liyue researcher specializing in ancient ruins, stone tablets, and historical legends."
+ },
+ {
+  "name": "Tonia",
+  "region": "Snezhnaya",
+  "description": "Childe's innocent and loving younger sister who writes letters to him from their home in Snezhnaya."
+ },
+ {
+  "name": "Alrani",
+  "region": "Sumeru",
+  "description": "A chronically unlucky Sumeru Akademiya student who constantly finds herself in trouble during her field research."
+ },
+ {
+  "name": "Bao'er",
+  "region": "Liyue",
+  "description": "A treasure-hunting researcher operating in Liyue with questionable motives regarding local artifacts."
+ },
+ {
+  "name": "Haypasia",
+  "region": "Sumeru",
+  "description": "A Sumeru Akademiya scholar who seeks to connect with the consciousness of the Dendro Archon through meditation."
+ },
+ {
+  "name": "Hosseini",
+  "region": "Sumeru",
+  "description": "A Sumeru researcher who frequently organizes academic events and studies involving unusual environmental phenomena."
+ }
+]
