@@ -64,13 +64,29 @@ function draw(){
   if(deck.length<2){const left=deck.slice();deck=shuffle(npcs.filter(n=>!left.includes(n))).concat(left)}
   return [deck.pop(),deck.pop()];
 }
+// Reads the infobox image straight from the wiki page's intro HTML (more reliable than the wiki's "page image" field).
+async function parseImage(title){
+  const url=`${API}?action=parse&format=json&origin=*&redirects=1&prop=text&section=0&disabletoc=1&page=${encodeURIComponent(title)}`;
+  const d=await (await fetch(url)).json();
+  if(!d.parse)return null;
+  const doc=new DOMParser().parseFromString(d.parse.text["*"],"text/html");
+  const img=doc.querySelector(".pi-image img")||doc.querySelector("figure img");
+  if(!img)return null;
+  const src=img.getAttribute("data-src")||img.getAttribute("src");
+  if(!src||src.startsWith("data:"))return null;
+  return src.replace(/\/revision\/latest(\/scale-to-width-down\/\d+)?/,"/revision/latest/scale-to-width-down/600");
+}
+async function findImage(n){
+  try{const s=await parseImage(n.wiki||n.name);if(s)return s}catch(e){}
+  try{ // fallback: search the wiki for the closest page title
+    const q=`${API}?action=query&format=json&origin=*&list=search&srlimit=1&srsearch=${encodeURIComponent(n.name+" Genshin")}`;
+    const r=await (await fetch(q)).json();const t=r.query.search[0]&&r.query.search[0].title;
+    if(t)return await parseImage(t);
+  }catch(e){}
+  return null;
+}
 function getImage(n){
-  if(!imgCache.has(n.name)){
-    const url=`${API}?action=query&format=json&origin=*&redirects=1&prop=pageimages&piprop=thumbnail&pithumbsize=700&titles=${encodeURIComponent(n.wiki||n.name)}`;
-    imgCache.set(n.name,fetch(url).then(r=>r.json()).then(d=>{
-      const p=Object.values(d.query.pages)[0];return p&&p.thumbnail?p.thumbnail.source:null
-    }).catch(()=>null));
-  }
+  if(!imgCache.has(n.name))imgCache.set(n.name,findImage(n));
   return imgCache.get(n.name);
 }
 function fill(card,n,src){
@@ -78,14 +94,14 @@ function fill(card,n,src){
   card.querySelector(".region").textContent=n.region;
   card.querySelector(".desc").textContent=n.description;
   const pic=card.querySelector(".pic");pic.textContent="";
-  if(src){const im=new Image();im.alt=n.name;im.src=src;im.onerror=()=>placeholder(pic,n);pic.appendChild(im)}
+  if(src){const im=new Image();im.alt=n.name;im.referrerPolicy="no-referrer";im.src=src;im.onerror=()=>placeholder(pic,n);pic.appendChild(im)}
   else placeholder(pic,n);
 }
 function placeholder(pic,n){pic.textContent="";const s=document.createElement("span");s.className="ph";s.textContent=n.name[0];pic.appendChild(s)}
 function withTimeout(p,ms){return Promise.race([p,new Promise(r=>setTimeout(()=>r(null),ms))])}
 
 async function show(pair){
-  const srcs=await Promise.all(pair.map(n=>withTimeout(getImage(n),2500)));
+  const srcs=await Promise.all(pair.map(n=>withTimeout(getImage(n),5000)));
   current=pair;
   cards.forEach((c,i)=>{c.className="card hidden";c.disabled=false;fill(c,pair[i],srcs[i])});
   requestAnimationFrame(()=>requestAnimationFrame(()=>cards.forEach(c=>{c.classList.remove("hidden");c.style.transition="opacity .6s"})));
