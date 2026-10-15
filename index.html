@@ -32,6 +32,11 @@ aside h3{font-family:var(--serif);font-size:1.3rem;margin:0 0 8px;display:flex;j
 #list li{padding:2px 0;border-top:1px solid rgba(255,255,255,.06)}
 #list li:first-child{border-top:0;color:var(--ink)}
 #list .none{font-style:italic}
+.dead{cursor:help}
+.dead:hover,.dead:focus-visible{color:var(--ink);text-decoration:underline dotted;outline:none}
+.tip{position:fixed;z-index:20;width:220px;background:var(--card);border-radius:12px;overflow:hidden;pointer-events:none;
+  text-align:center;filter:grayscale(1) brightness(.75);box-shadow:0 8px 30px rgba(0,0,0,.5)}
+.tip .pic{aspect-ratio:4/3}.tip h2{font-size:1.4rem}.tip .desc{font-size:.78rem}.tip .info{padding:10px 12px 14px}
 .vs{font-family:var(--serif);font-size:1.3rem;color:var(--accent)}
 .card{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;background:var(--card);border:2px solid transparent;
   border-radius:14px;overflow:hidden;text-align:center;
@@ -74,6 +79,7 @@ footer a{color:var(--muted)}
   Fan project, not affiliated with HoYoverse. Genshin Impact and its artwork belong to HoYoverse.<br>
   Images are loaded from the <a href="https://genshin-impact.fandom.com" target="_blank" rel="noopener">Genshin Impact Wiki</a> (text under CC BY-SA).
 </footer>
+<div id="tip" class="tip" hidden><div class="pic"></div><div class="info"><h2></h2><div class="region"></div><p class="desc"></p></div></div>
 <script>
 const API="https://genshin-impact.fandom.com/api.php";
 const cards=[document.getElementById("c0"),document.getElementById("c1")];
@@ -89,7 +95,7 @@ function renderFallen(){
   document.getElementById("count").textContent=fallen.length;
   const ol=document.getElementById("list");ol.textContent="";
   if(!fallen.length){const li=document.createElement("li");li.className="none";li.textContent="No one yet.";ol.appendChild(li);return}
-  fallen.forEach(n=>{const li=document.createElement("li");li.textContent=n;ol.appendChild(li)});
+  fallen.forEach(n=>{const li=document.createElement("li");li.className="dead";li.tabIndex=0;li.dataset.name=n;li.textContent=n;ol.appendChild(li)});
 }
 // Reads the infobox image straight from the wiki page's intro HTML (more reliable than the wiki's "page image" field).
 async function parseImage(title){
@@ -149,8 +155,31 @@ function finish(){
   const n=fallen.length,total=npcs.length;
   document.getElementById("total").textContent=n;
   document.getElementById("summary").textContent=(n===1?"casualty":"casualties")+" out of "+total+" NPCs";
-  document.getElementById("roll").textContent=n?fallen.slice().reverse().join(", "):"Nobody died. Everyone survived.";
+  const roll=document.getElementById("roll");roll.textContent="";
+  if(!n)roll.textContent="Nobody died. Everyone survived.";
+  else fallen.slice().reverse().forEach((name,k)=>{
+    if(k)roll.append(", ");
+    const s=document.createElement("span");s.className="dead";s.tabIndex=0;s.dataset.name=name;s.textContent=name;roll.appendChild(s);
+  });
   document.getElementById("stage").hidden=true;document.getElementById("done").hidden=false;document.getElementById("again").focus()}
+// Hover (or keyboard focus) on any casualty name shows a small grayed-out info card
+const tip=document.getElementById("tip");let tipFor=null;
+function showTip(el){
+  const n=npcs.find(x=>x.name===el.dataset.name);if(!n)return;
+  tipFor=n;fill(tip,n,null);tip.hidden=false;
+  getImage(n).then(s=>{if(tipFor===n&&s)fill(tip,n,s)});
+}
+function moveTip(x,y){
+  const w=tip.offsetWidth,h=tip.offsetHeight;let l=x+16,t=y+16;
+  if(l+w>innerWidth-8)l=x-w-16;if(t+h>innerHeight-8)t=innerHeight-h-8;
+  tip.style.left=Math.max(8,l)+"px";tip.style.top=Math.max(8,t)+"px";
+}
+function hideTip(){tipFor=null;tip.hidden=true}
+document.addEventListener("mouseover",e=>{const el=e.target.closest(".dead");if(el){showTip(el);moveTip(e.clientX,e.clientY)}});
+document.addEventListener("mousemove",e=>{if(tipFor)moveTip(e.clientX,e.clientY)});
+document.addEventListener("mouseout",e=>{if(e.target.closest(".dead"))hideTip()});
+document.addEventListener("focusin",e=>{const el=e.target.closest(".dead");if(el){showTip(el);const r=el.getBoundingClientRect();moveTip(r.right,r.top)}});
+document.addEventListener("focusout",hideTip);
 function start(){
   fallen=[];renderFallen();deck=shuffle(npcs.slice());
   document.getElementById("done").hidden=true;document.getElementById("stage").hidden=false;
